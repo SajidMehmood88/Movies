@@ -1,5 +1,6 @@
 package com.zattoo.movies;
 
+import androidx.test.espresso.IdlingRegistry;
 import androidx.test.espresso.IdlingResource;
 import androidx.test.rule.ActivityTestRule;
 
@@ -23,4 +24,9 @@ public class BaseTest{
     @Rule
     public ActivityTestRule<MainActivity> activityTestRule
             = new ActivityTestRule<>(MainActivity.class);
+
+    public void moviesScreenIdlingResources() {
+        setResources(activityTestRule.getActivity().getIdlingResource());
+        IdlingRegistry.getInstance().register(getResources());
+    }
 }

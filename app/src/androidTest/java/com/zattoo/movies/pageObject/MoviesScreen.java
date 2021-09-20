@@ -12,10 +12,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.CoreMatchers.allOf;
 import static org.hamcrest.CoreMatchers.endsWith;
 
-import android.graphics.Color;
-
 import com.zattoo.movies.R;
-import com.zattoo.movies.Util;
+import com.zattoo.movies.tool.Util;
 
 public class MoviesScreen extends Util {
 

@@ -29,7 +29,7 @@ object Versions {
     const val mockitoKotlin = "2.2.0"
     const val coroutinesTest = "1.4.2"
     const val jUnit = "4.12"
-    const val espresso = "3.3.0"
+    const val espresso = "3.3.0-beta01"
     const val androidxJunit = "1.1.2"
 }
 
@@ -104,4 +104,7 @@ object Deps {
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     const val androidxJunit = "androidx.test.ext:junit:${Versions.androidxJunit}"
     const val espressoIdlingResource = "androidx.test.espresso:espresso-idling-resource:${Versions.espresso}"
+    const val rules = "com.android.support.test:rules:1.0.2"
+    const val contrib = "androidx.test.espresso:espresso-contrib:3.2.0";
+
 }
