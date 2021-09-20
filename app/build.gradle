@@ -51,6 +51,8 @@ dependencies {
     implementation Deps.navigationUi
     implementation Deps.legacySupport
     implementation Deps.glide
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0-alpha05'
+    androidTestImplementation 'androidx.test:rules:1.4.0-alpha05'
     annotationProcessor Deps.glide
     implementation Deps.koinAndroid
     implementation Deps.koinViewmodel
@@ -69,6 +71,7 @@ dependencies {
     implementation Deps.timber
     implementation Deps.espressoIdlingResource
 
+
     testImplementation Deps.jUnit
     testImplementation Deps.mockitoKotlin
     testImplementation Deps.mockitoCore
@@ -79,5 +82,7 @@ dependencies {
 
     androidTestImplementation Deps.androidxJunit
     androidTestImplementation Deps.espresso
+    androidTestImplementation Deps.rules
+    androidTestImplementation Deps.contrib
 
 }
