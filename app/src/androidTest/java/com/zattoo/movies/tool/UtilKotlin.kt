@@ -1,4 +1,4 @@
-package com.zattoo.movies.Util
+package com.zattoo.movies.tool
 
 import android.view.View
 import android.widget.TextView

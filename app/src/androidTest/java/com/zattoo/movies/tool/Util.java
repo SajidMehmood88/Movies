@@ -1,4 +1,4 @@
-package com.zattoo.movies.Util;
+package com.zattoo.movies.tool;
 
 import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
