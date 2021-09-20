@@ -7,7 +7,8 @@ import com.zattoo.movies.presentation.MainActivity;
 
 import org.junit.Rule;
 
-public class BaseTest extends Util {
+public class BaseTest{
+
     final int timeout = 10000;
     private IdlingResource resources;
 
