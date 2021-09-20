@@ -11,22 +11,29 @@ import org.junit.Rule;
 public class BaseTest{
 
     final int timeout = 10000;
-    private IdlingResource resources;
+    private IdlingResource myIdling;
 
-    public IdlingResource getResources() {
-        return resources;
+    public IdlingResource getMyIdling() {
+        return myIdling;
     }
 
-    public void setResources(IdlingResource resources) {
-        this.resources = resources;
+    public void setMyIdling(IdlingResource myIdling) {
+        this.myIdling = myIdling;
     }
+
 
     @Rule
     public ActivityTestRule<MainActivity> activityTestRule
             = new ActivityTestRule<>(MainActivity.class);
 
-    public void moviesScreenIdlingResources() {
-        setResources(activityTestRule.getActivity().getIdlingResource());
-        IdlingRegistry.getInstance().register(getResources());
+    public void registerIdlingResources() {
+        setMyIdling(activityTestRule.getActivity().getIdlingResource());
+        IdlingRegistry.getInstance().register(getMyIdling());
+    }
+
+    public void unRegisterIdlingResources(){
+        if(myIdling !=null){
+            IdlingRegistry.getInstance().unregister(myIdling);
+        }
     }
 }

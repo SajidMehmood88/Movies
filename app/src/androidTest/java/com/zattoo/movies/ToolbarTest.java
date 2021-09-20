@@ -35,6 +35,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import com.zattoo.movies.pageObject.MoviesScreen;
 import com.zattoo.movies.presentation.MainActivity;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -45,6 +46,7 @@ public class ToolbarTest extends BaseTest {
     private MoviesScreen moviesScreen = new MoviesScreen();
 
     private String specificTitle = "Movies";
+
 
     @Test
     public void toolbarWithSpecificTitle() {
