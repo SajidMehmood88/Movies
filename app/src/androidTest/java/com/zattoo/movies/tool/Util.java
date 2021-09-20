@@ -156,9 +156,11 @@ public class Util extends UtilKotlin {
 
     public static class RecyclerViewItemCountAssertion implements ViewAssertion {
         private final int expectedCount;
+        private final String textMessage;
 
-        public RecyclerViewItemCountAssertion(int expectedCount) {
+        public RecyclerViewItemCountAssertion(String textMessage, int expectedCount) {
             this.expectedCount = expectedCount;
+            this.textMessage = textMessage;
         }
 
         @Override
@@ -169,7 +171,7 @@ public class Util extends UtilKotlin {
 
             RecyclerView recyclerView = (RecyclerView) view;
             RecyclerView.Adapter adapter = recyclerView.getAdapter();
-            assertThat("List is empty",adapter.getItemCount(), is(greaterThanOrEqualTo(expectedCount)));
+            assertThat(textMessage,adapter.getItemCount(), is(greaterThanOrEqualTo(expectedCount)));
 
 
         }

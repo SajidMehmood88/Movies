@@ -32,6 +32,6 @@ public class MoviesListTest extends BaseTest {
     @Test
     public void checkMoviesList() throws InterruptedException {
         Thread.sleep(3000);
-        onView(withId(R.id.recyclerView)).check(new Util.RecyclerViewItemCountAssertion(1));
+        onView(withId(R.id.recyclerView)).check(new Util.RecyclerViewItemCountAssertion("Movies list is empty",1));
     }
 }
