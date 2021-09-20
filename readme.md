@@ -27,3 +27,6 @@ This project takes advantage of best practices, many popular libraries and tools
 - Espresso
 - Assertj
 - Espresso-contrib
+
+## Framework
+- Page object design for the test
