@@ -4,7 +4,7 @@ import com.zattoo.movies.pageObject.MoviesScreen;
 
 import org.junit.Test;
 
-public class loadingDataTest {
+public class LoadingDataTest {
 
     private MoviesScreen moviesScreen = new MoviesScreen();
 
