@@ -21,6 +21,7 @@ import androidx.test.espresso.NoMatchingViewException;
 import androidx.test.espresso.ViewAssertion;
 import androidx.test.espresso.contrib.RecyclerViewActions;
 
+import com.zattoo.movies.pageObject.MoviesScreen;
 import com.zattoo.movies.tool.Util;
 
 import org.junit.After;
@@ -29,9 +30,19 @@ import org.junit.Test;
 
 public class MoviesListTest extends BaseTest {
 
+    private MoviesScreen moviesScreen = new MoviesScreen();
+
     @Test
     public void checkMoviesList() throws InterruptedException {
         Thread.sleep(3000);
-        onView(withId(R.id.recyclerView)).check(new Util.RecyclerViewItemCountAssertion("Movies list is empty",1));
+        onView(withId(R.id.recyclerView)).check(new Util.RecyclerViewItemCountAssertion
+                ("Movies list is empty", 1));
+
+        for(int i=1; i<=4; i++) {
+            moviesScreen.isRowContain(i, moviesScreen.getMovieImage());
+            moviesScreen.isRowContain(i, moviesScreen.getMovieTitle());
+            moviesScreen.isRowContain(i, moviesScreen.getMovieSubtitle());
+            moviesScreen.isRowContain(i, moviesScreen.getMoviePrice());
+        }
     }
 }
